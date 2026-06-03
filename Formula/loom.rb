@@ -1,25 +1,25 @@
 class Loom < Formula
   desc "Agent-first browser automation runtime — deterministic Chromium sessions with replay-equal hash chains, MCP-native tools, and a content-addressed action store."
   homepage "https://github.com/mentiora-ai/loom"
-  version "0.9.2"
+  version "0.9.8"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/mentiora-ai/loom/releases/download/v0.9.2/loom-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "c5c99ee49187ad842661cb32017d523298eb308b13c242949be038151ed89c48"
+      url "https://github.com/mentiora-ai/loom/releases/download/v0.9.8/loom-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "d9e79511e61c27395b25a8045a7a3033beeb1e4ca2a60b2ca08f1a459fb53566"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mentiora-ai/loom/releases/download/v0.9.2/loom-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "72c61f8b15918d79136d5bac3842e2e37280a648de9a0e4a2c391d9925d2ac9b"
+      url "https://github.com/mentiora-ai/loom/releases/download/v0.9.8/loom-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "689fe6c8f534c2cf88f997a56e995e9c6b6a6fbdad16fe5eb23eb45a286097e2"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/mentiora-ai/loom/releases/download/v0.9.2/loom-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "247065144f1a080517d7633bd9a83ac0796d73f22b84b27a84fd04cbe696a118"
+      url "https://github.com/mentiora-ai/loom/releases/download/v0.9.8/loom-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "f9a1047530ac48b8488e98f8621295d9330597c158a977d52811d816034e5031"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mentiora-ai/loom/releases/download/v0.9.2/loom-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "8e5bc96f029a1acb2ec74ea78c6b2df8202fa1901c62438f7043a6d0ec89ec07"
+      url "https://github.com/mentiora-ai/loom/releases/download/v0.9.8/loom-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "9c0b1f1e36566af7194053f92e01960fe645f59676b339b0a197f957d0d5bd9c"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
