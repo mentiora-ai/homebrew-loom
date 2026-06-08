@@ -1,25 +1,25 @@
 class Loom < Formula
   desc "Agent-first browser automation runtime — deterministic Chromium sessions with replay-equal hash chains, MCP-native tools, and a content-addressed action store."
   homepage "https://github.com/mentiora-ai/loom"
-  version "0.9.9"
+  version "0.10.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/mentiora-ai/loom/releases/download/v0.9.9/loom-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "43476ba8a2f67b662e6522e34255dda0706b014f38fac0c8f618ab363cb68754"
+      url "https://github.com/mentiora-ai/loom/releases/download/v0.10.0/loom-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "187b38782bb2e53edfa12d2f62b918d026d35f7b584a1f0a26244ee6290ce3f1"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mentiora-ai/loom/releases/download/v0.9.9/loom-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "15ea4832ae4d8e2134ee17e2e22010f40d8c98fe0b24fc99cc2dc9dedb92f937"
+      url "https://github.com/mentiora-ai/loom/releases/download/v0.10.0/loom-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "ad889e816143de78c0cc9169dff4d19291988fd2b33ebee923aa613ff1ddc227"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/mentiora-ai/loom/releases/download/v0.9.9/loom-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "133c85c551e1dbf034ae7f299393e4aff3a843c9dead7909f9d1dc357217cb7e"
+      url "https://github.com/mentiora-ai/loom/releases/download/v0.10.0/loom-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "8dd1bd97e514ba4dfe18355f8c75c3d7daf8f76cbd799e22d5e8cf7a0bc4d378"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mentiora-ai/loom/releases/download/v0.9.9/loom-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "f73f628232b5c9a1f17c7f41295f4bb388cc3241a8e0ddd08f57bfe29d8cfc30"
+      url "https://github.com/mentiora-ai/loom/releases/download/v0.10.0/loom-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "e75df93caadbf97bc3b107d3d570ce2dfd4cdd98c654fb0e51750f8e6b97a43b"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
