@@ -1,25 +1,25 @@
 class Loom < Formula
   desc "Agent-first browser automation runtime — deterministic Chromium sessions with replay-equal hash chains, MCP-native tools, and a content-addressed action store."
   homepage "https://github.com/mentiora-ai/loom"
-  version "0.14.0"
+  version "0.14.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/mentiora-ai/loom/releases/download/v0.14.0/loom-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "4cd2466cdadba06779f6f2befeec45da61c2bc30b7be54a124de125a88074139"
+      url "https://github.com/mentiora-ai/loom/releases/download/v0.14.1/loom-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "db32ad7bda46175144f6c75484d4c6f37e4bc1bd84c2839cbec21f2fad35ac50"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mentiora-ai/loom/releases/download/v0.14.0/loom-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "9b85441441582dadf1a1532e3932fef4588adab82e11f2c708c39c84091c79ec"
+      url "https://github.com/mentiora-ai/loom/releases/download/v0.14.1/loom-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "abbc36961c1242da3e37dd05bf1ee9afda1ec306fa7352bd1d97a1d323558f45"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/mentiora-ai/loom/releases/download/v0.14.0/loom-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "07b8116ae7322834d7a53887baf92c9824ab7b1be9aad1adbb82cd561bfa4e4c"
+      url "https://github.com/mentiora-ai/loom/releases/download/v0.14.1/loom-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "81dd014c3bb52c8b8ad86040919845bd93a8a156d36686854aff3906743ce884"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mentiora-ai/loom/releases/download/v0.14.0/loom-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "30c5776b3579afd901c9f57ea50c7fe0090dc95bb0ed859348eb9c24b611e568"
+      url "https://github.com/mentiora-ai/loom/releases/download/v0.14.1/loom-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "1c0d6b0fb104994e9d910cf6a40ce90c76ee5a63321da071d6e72573b88f211b"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
@@ -47,10 +47,18 @@ class Loom < Formula
   end
 
   def install
-    bin.install "loom", "loom-daemon", "loom-mcp", "loom-shim-chromium" if OS.mac? && Hardware::CPU.arm?
-    bin.install "loom", "loom-daemon", "loom-mcp", "loom-shim-chromium" if OS.mac? && Hardware::CPU.intel?
-    bin.install "loom", "loom-daemon", "loom-mcp", "loom-shim-chromium" if OS.linux? && Hardware::CPU.arm?
-    bin.install "loom", "loom-daemon", "loom-mcp", "loom-shim-chromium" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "loom", "loom-daemon", "loom-mcp", "loom-shim-chromium"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "loom", "loom-daemon", "loom-mcp", "loom-shim-chromium"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "loom", "loom-daemon", "loom-mcp", "loom-shim-chromium"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "loom", "loom-daemon", "loom-mcp", "loom-shim-chromium"
+    end
 
     install_binary_aliases!
 
